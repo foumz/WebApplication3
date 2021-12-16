@@ -10,7 +10,7 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark">
         <a class="navbar-brand" href="#">Company</a>
         <div class="col-8">
             <ul class="navbar-nav">
@@ -28,13 +28,25 @@
                 </li>
             </ul>
         </div>
-        <div class="col-4 text-black-50">
+        <div class="col-4 text-white" >
             @ViewBag.Message
         </div>
     </nav>
    
     <div class="container-fluid">
-        @RenderBody()
+        <div class="row">
+            <div class="col-2 text-white" style="background-color:#fa8405;min-height:1050px;padding:0px">
+                <div class="list-group">
+                    <a href="#" class="list-group-item text-white" style="background-color:transparent">Favourites</a>
+                    <a href="#" class="list-group-item text-white" style="background-color:transparent">Products</a>
+                    <a href="#" class="list-group-item text-white" style="background-color:transparent">Your orders</a>
+                </div>
+            </div>
+
+            <div class="col-10" style="min-height:610px">
+                @RenderBody()
+            </div>
+        </div>
     </div>
 </body>
 </html>
